@@ -378,6 +378,24 @@ address { font-style: normal; font-size: 17px; line-height: 1.55; color: var(--i
 /* =========================================================
    Carrito flotante + drawer + modal
    ========================================================= */
+/* Botón flotante de WhatsApp (esquina inferior derecha) */
+.wa-fab {
+  position: fixed; z-index: 55; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom));
+  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
+  background: #25D366; color: #fff; text-decoration: none;
+  box-shadow: 0 8px 24px -8px rgba(18, 140, 70, .6);
+  transition: scale .2s var(--ease-out);
+  animation: fadeUp .6s var(--ease-out) 2.2s both;
+}
+.wa-fab::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25D366;
+  animation: waRing 2.4s ease-out 3s infinite; pointer-events: none;
+}
+@keyframes waRing { 0% { opacity: .7; scale: 1; } 100% { opacity: 0; scale: 1.5; } }
+.wa-fab:active { scale: .92; }
+@media (hover: hover) { .wa-fab:hover { scale: 1.08; } }
+@media (max-width: 520px) { .wa-fab { width: 52px; height: 52px; } .wa-fab svg { width: 26px; height: 26px; } }
+
 /* Carrito: centrado abajo, flotando suave con un aura de su color */
 .cart-fab {
   position: fixed; z-index: 50; left: 50%; transform: translateX(-50%);
