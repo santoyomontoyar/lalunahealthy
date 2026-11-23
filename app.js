@@ -4,9 +4,8 @@
 const CONFIG = {
   // Número de WhatsApp con lada de país, solo dígitos. Ej: "5219981234567"
   // Si se deja vacío, WhatsApp abrirá para que el cliente elija el chat.
-  // ⚠ NÚMERO DE PRUEBA. El del negocio es "529984306986" / "998 430 6986": regrésalo antes de publicar.
-  whatsapp: "529981368417",
-  whatsappLabel: "998 136 8417",
+  whatsapp: "529984306986",
+  whatsappLabel: "998 430 6986",
   phone: "", // Solo WhatsApp (sin teléfono fijo)
   timezone: "America/Cancun",
   // Horario por día (0 = domingo … 6 = sábado). null = cerrado.
